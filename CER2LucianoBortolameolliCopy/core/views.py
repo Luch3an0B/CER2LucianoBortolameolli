@@ -1,5 +1,5 @@
 from django.shortcuts import render
-#from django.contrib.auth.models import User
+from .models import Comunicado
 
 
 # Create your views here.
@@ -10,18 +10,18 @@ def PagHomeIndex(request):
 
 
 
-#def RegistroIndex(request):
-    #if (request.POST):
-        
-       # nombre_usuario=request.POST[User.username]
-      #  correo_usuario=request.POST[User.]
+def ListaComunicados(request):
+    #obtener Columnas de comunicado desde el Modelo
+    Columnas= Comunicado.objects.all()
 
-        #usuario_trabajador=User.objects.create_user[]
-   # if request.POST=='POST':
-    #    form=UserCreationForm()
-     #   if form.is_valid():
-      #      form.save()
+    #Definir contenido en columnas
+    DatosCom={
+        'inicio': Columnas,
+    }
 
+    #cargar listado DatosCom en request (envia el diccionario al template home)
+
+    return render(request, 'core/home.html',DatosCom)
 
 
       
