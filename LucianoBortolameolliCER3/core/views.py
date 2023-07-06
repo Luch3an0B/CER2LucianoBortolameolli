@@ -40,7 +40,7 @@ def nueva_herramienta(request):
 
         #validaciones y lógica de negocio
 
-        Tool = Herramienta(etiqueta=etiqueta,marca=marca,estado=estado,tipo=tipo,Precio=Precio)
+        Tool = Herramienta(id_herramienta=etiqueta,marca_herramienta=marca,estado_herramienta=estado,tipo_herramienta=tipo,precio_herramienta=Precio)
         Tool.save()
         
     
@@ -68,7 +68,7 @@ def nueva_maquina(request):
 
         #validaciones y lógica de negocio
 
-        Maq = Maquina(placa=placa,marca=marca,estado=estado,tipo=tipo,Precio=Precio)
+        Maq = Maquina(placa_matricula=placa,marca_maquina=marca,estado_maquina=estado,tipo_maquina=tipo,precio_maq=Precio)
         Maq.save()
         
     

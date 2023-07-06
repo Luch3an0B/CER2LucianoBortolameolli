@@ -31,14 +31,14 @@
     <br><br> 
     <h4><strong>TABLA HERRAMIENTAS</strong></h4>
     <br> 
-    <table class="table-secondary table-stripped-columns">
+    <table class="table table-secondary table-striped-columns">
         <thead>
             <tr>
                 <th scope="col">ID de Etiqueta</th>
-                <th scope="col">Marca de Herramienta</th>
-                <th scope="col">Estado de Herramienta</th>
-                <th scope="col">Tipo de herramienta</th>
-                <th scope="col">Precio de herramienta</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Precio</th>
             </tr>
         </thead>
     
@@ -56,16 +56,35 @@
    
     </table>
    
+    <br><br><br><br> 
 
 
+    <h4><strong>TABLA MAQUINAS</strong></h4>
+    <br> 
+    <table class="table table-secondary table-striped-columns">
+        <thead>
+            <tr>
+                <th scope="col">Placa de matricula</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Precio</th>
+            </tr>
+        </thead>
+    
+    <tbody>
+    {% for Maquina in Maquinas%}
+            <tr>
+                <td>{{Maquina.placa_matricula}}</td>
+                <td>{{Maquina.marca_maquina}}</td>
+                <td>{{Herramienta.estado_maquina}}</td>
+                <td>{{Herramienta.tipo_maquina}}</td>
+                <td>{{Herramienta.precio_maq}}</td>
+            </tr>
+    {% endfor%}
+    </tbody>
    
-
-
-
-
-    <br><br> 
-<strong>TABLA MAQUINAS</strong>
-
+    </table>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 </body>
 </html>
